@@ -25,6 +25,22 @@ function filter(arr, callback){
     return newArr;
 }
 
+//recreating some
+function some(arr, callback){
+    for(let idx in arr){
+        if(callback(arr[idx], idx, arr)) return true;
+    }
+    return false
+}
+
+//recreating every
+function every(arr, callback){
+    for(let idx in arr){
+        if(!(callback(arr[idx], idx, arr))) return false;
+    }
+    return true;
+}
+
 const dogBreeds = ['chihuahua', 'pit bull', 'labrador', 'cane corso', 'husky', 'great dane'];
 
 const songs = [
