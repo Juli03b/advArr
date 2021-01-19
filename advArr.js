@@ -41,6 +41,21 @@ function every(arr, callback){
     return true;
 }
 
+//recreating find
+function find(arr, callback){
+    for (let idx in arr) {
+       if(callback(arr[idx], idx, arr)) return arr[idx];
+    }
+}
+
+//recreating findIndex
+function findIndex(arr, callback){
+    for(let idx in arr){
+        if(callback(arr[idx], idx, arr)) return idx;
+    }
+    return -1; 
+}
+
 const dogBreeds = ['chihuahua', 'pit bull', 'labrador', 'cane corso', 'husky', 'great dane'];
 
 const songs = [
